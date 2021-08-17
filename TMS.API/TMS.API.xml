@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TMS.API</name>
+    </assembly>
+    <members>
+        <member name="T:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController">
+            <summary>
+            车辆管理API
+            </summary>
+        </member>
+        <member name="F:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController._carRegistration">
+            <summary>
+            车辆管理
+            </summary>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.#ctor(TMS.Service.CarRegistration.IVehicleManagementService,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="carRegistration"></param>
+            <param name="hostingEnvironment"></param>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.GetCarRegistration(System.String,System.String,System.String,System.String)">
+            <summary>
+            车辆管理—显示基础数据
+            </summary>
+            <param name="factoryPlate"></param>厂牌型号
+            <param name="carNumber"></param>车牌号
+            <param name="carName"></param>司机名称
+            <param name="companies"></param>所属公司
+            <returns></returns>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.AddCar(TMS.Model.Entity.RegistrationModel)">
+            <summary>
+            车辆管理—添加基础数据
+            </summary>
+            <param name="registrationModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.UpLoadRegistrationImg">
+            <summary>
+            上传图片—保险卡照片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.DeleteCar(System.String)">
+            <summary>
+            车辆管理—删除基本信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.EditCar(System.Int32)">
+            <summary>
+            车辆管理—获取相关数据信息（反填）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS.API.Controllers.BasicInformation.VehicleManagementAPIController.UpdateCar(TMS.Model.Entity.RegistrationModel)">
+            <summary>
+            车辆管理—修改相关数据信息
+            </summary>
+            <param name="registrationModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS.API.Controllers.User.UserAPIController">
+            <summary>
+            用户API
+            </summary>
+        </member>
+        <member name="F:TMS.API.Controllers.User.UserAPIController._userService">
+            用户服务
+        </member>
+        <member name="M:TMS.API.Controllers.User.UserAPIController.#ctor(TMS.Service.User.IUserService)">
+            <summary>
+            构造函数进行注入
+            </summary>
+            <param name="userService"></param>
+        </member>
+        <member name="M:TMS.API.Controllers.User.UserAPIController.GetLogin(System.String,System.String)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="userPwd">用户密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS.API.Controllers.WeatherForecastController">
+            <summary>
+            控制器
+            </summary>
+        </member>
+        <member name="M:TMS.API.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{TMS.API.Controllers.WeatherForecastController})">
+            <summary>
+            日志管理
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="T:TMS.API.Program">
+            <summary>
+            Program类
+            </summary>
+        </member>
+        <member name="M:TMS.API.Program.Main(System.String[])">
+            <summary>
+            主函数（主线程）
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:TMS.API.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            IHostBuilder CreateHostBuilder
+            </summary> 
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS.API.Startup">
+            <summary>
+            Startup 类
+            </summary>
+        </member>
+        <member name="M:TMS.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            IConfiguration
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:TMS.API.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:TMS.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:TMS.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            使用此方法配置HTTP请求管道。
+            </summary>
+            <param name="app">IApplicationBuilder 定义用于配置应用请求管道的类，ASP.NET Core 请求管道包含一系列请求委托，依次调用。</param>
+            <param name="env"></param>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:TMS.API.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            ConfigureContainer是您可以直接注册的地方
+            </summary>
+            <param name="builder"></param>
+        </member>
+    </members>
+</doc>
